@@ -59,4 +59,6 @@ done
 
 # write real push count into file
 echo $((totalCount - offset)) >./.count.txt
+chmod 666 /data/log/mysql/.count.txt
+
  
