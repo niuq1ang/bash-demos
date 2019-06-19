@@ -12,7 +12,7 @@ offset=0
 totalCount=$(wc -l /data/log/mysql/mysql-slow.log | awk '{print $1}')
 
 IFS=$'\n'
-declare -a lines=(`cat /data/log/mysql/mysql-slow.log | tail -n +$count | awk '{print $0}'`)
+declare -a lines=(`tail -n +$count /data/log/mysql/mysql-slow.log | awk '{print $0}'`)
 
 len=${#lines[@]}
 for ((i=0;i<$len;i++));do
